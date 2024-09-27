@@ -282,12 +282,47 @@
             <p>Veuillez suivre les précautions de sécurité pour une utilisation optimale. Nos jacuzzis sont régulièrement nettoyés et désinfectés. L’eau est traitée tout au long de votre baignade vous assurant un Jacuzzi désinfecté. La centrale du jacuzzi doit être branchée sur une prise standard 230V 16A. Nous vous conseillons d’utiliser une rallonge neuve de bonne qualité avec terre adaptée à une utilisation extérieure et ne pas utiliser de multiprises. Nous déconseillons l'utilisation pour les enfants sans surveillance et les femmes enceintes.</p>
         </section>
 
-        <section id="Nosjacuzzi" class ="Nosjacuzzi">
-            <h2> Nos jacuzzi en images </h2>
-            <div class="Nosjacuzzi-item">
-                <p>Explorez dès maintenant nos jacuzzi à travers notre galerie photos! <span class="highlight2">Découvrez une collection d'images captivantes </span> mettant en avant nos différents modèles, pour vous aider à trouver celui qui correspond parfaitement à vos besoins et à votre espace. <span class="highlight2">Détente et confort assurés!.</span> </p>
-             </div>
-        </section>
+        <section id="Nosjacuzzi" class="Nosjacuzzi">
+  <h2>Nos jacuzzi en images</h2>
+  <div class="Nosjacuzzi-item">
+    <p>Explorez dès maintenant nos jacuzzi à travers notre galerie photos! <span class="highlight2 clickable" id="showGallery">Découvrez une collection d'images captivantes</span> mettant en avant nos différents modèles, pour vous aider à trouver celui qui correspond parfaitement à vos besoins et à votre espace. <span class="highlight2">Détente et confort assurés!</span></p>
+    <p class="click-instruction">Cliquez sur le texte en surbrillance pour voir les images.</p>
+  </div>
+
+  <div id="gallery" style="display:none;">
+    <img src="Jacuzzi 2.jpg" alt="Jacuzzi 2" class="gallery-image">
+    <!-- Ajoutez autant d'images que nécessaire -->
+  </div>
+</section>
+
+<script>
+  document.getElementById('showGallery').addEventListener('click', function() {
+    var gallery = document.getElementById('gallery');
+    if (gallery.style.display === 'none') {
+      gallery.style.display = 'block';
+    } else {
+      gallery.style.display = 'none';
+    }
+  });
+</script>
+
+<style>
+  .gallery-image {
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    margin: 10px; /* Espace entre les images */
+  }
+
+  .clickable {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .click-instruction {
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
         <section id="contact" class="contact">
             <h2>Contactez-nous</h2>
             <div class="contact-info">
